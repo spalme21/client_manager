@@ -1,4 +1,10 @@
 
+enum Status {
+    AVAILABLE,
+    CHECKED_OUT,
+    OVERDUE;
+}
+
 public class Book {
     
     /**
@@ -27,13 +33,8 @@ public class Book {
     private String summary;
 
     /**
-     * The number of available copies of the book.
+     * The status of the book
      */
-    private int availableCopies;
-
-    /**
-     * The number of checked out copies of the book.
-     */
-    private int checkedOutCopies;
-
+    private Status status;
+    
 }
