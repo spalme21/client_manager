@@ -1,3 +1,4 @@
+
 public class User {
 
     private String firstName;
@@ -5,6 +6,6 @@ public class User {
     private String userId;
     private byte pinHash[];
     private ArrayList<Book> checkedOutBooks;
-    
+
 
 }
