@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Random;
 public class Library {
     
     /**
@@ -36,6 +37,39 @@ public class Library {
 
     }
 
-    // TODO: GetNewUserId()
+    /**
+     * Generate a new, unique ID for a user
+     * @return  the ID
+     */
+    public String getNewUserId() {
+        
+        // inits
+        String id;
+        Random rng = new Random();
+        int len = 6;
+        boolean nonUnique;
+
+        // loop until we get a unique number
+        do {
+
+            // generate the number
+            id = "";
+            for (int i = 0; i < len; i++) {
+                id += ((Integer)rng.nextInt(10)).toString();
+            }
+
+            // check if it's unique
+            nonUnique = false;
+            for (User u : this.users) {
+                if (id.compareTo(u.getUserID()) == 0) {
+                    nonUnique = true;
+                    break;
+                }
+            }
+        } while (nonUnique);
+
+        return id;
+
+    }
 
 }

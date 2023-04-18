@@ -61,4 +61,14 @@ public class User {
         );
 
     }
+
+    /**
+     * Return the user's ID
+     * @return  the ID
+     */
+    public String getUserID() {
+        
+        return this.userID;
+
+    }
 }
